@@ -1,0 +1,43 @@
+group 'dk.whelan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gurps npc Importer from gcs',
+                'Implementation-Version': 1.0,
+                'Main-Class': 'dk.whelan.gurps.npc.generator.ImportToMongoDB'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task dist(type: Zip) {
+    dependsOn fatJar
+    from 'src/dist'
+    into('libs') {
+        from jar.archivePath
+        from configurations.runtime
+    }
+}
+
+artifacts {
+    archives dist
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.mongodb:mongo-java-driver:3.1.1'
+    compile 'org.json:json:20151123'
+}
+
+
