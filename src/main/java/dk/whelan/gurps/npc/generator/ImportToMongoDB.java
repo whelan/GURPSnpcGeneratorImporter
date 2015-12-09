@@ -25,14 +25,17 @@ public class ImportToMongoDB {
 
     public static void main(String[] args) throws IOException {
         String pathString = "Library";
-        if (args.length == 2) {
+        if (args.length > 0) {
             pathString = args[0];
+        }
+        if (args.length == 2) {
             mongoClient = new MongoClient(new MongoClientURI(args[1]));
         } else {
             mongoClient = new MongoClient();
         }
-
+        mongoClient.dropDatabase("gurps");
         db = mongoClient.getDatabase("gurps");
+
         System.out.println(FileSystems.getDefault().getRootDirectories().iterator().next());
         Path path = FileSystems.getDefault().getPath(pathString);
 
@@ -55,19 +58,12 @@ public class ImportToMongoDB {
 
 
     private static void skillParse(Path path) {
-        System.out.println(path);
         String filename = path.getFileName().toString();
         String book = filename.substring(0,filename.lastIndexOf("."));
         try {
             String content = new String(Files.readAllBytes(path));
             JSONObject xmlJSONObj = XML.toJSONObject(content);
             xmlJSONObj = findLowestArray(xmlJSONObj);
-            System.out.println(xmlJSONObj.keySet());
-            if (path.toString().equals("Library/Skills/Dragons.skl")) {
-                String t = "";
-            }
-//            System.out.println(xmlJSONObj);
-            final JSONObject finalXmlJSONObj = xmlJSONObj;
             for (String key : xmlJSONObj.keySet()) {
                 Object obj = xmlJSONObj.get(key);
                 if (obj instanceof JSONArray) {
@@ -96,23 +92,6 @@ public class ImportToMongoDB {
         } else {
             return findLowestArray(jsonObject.getJSONObject(jsonObject.keys().next()));
         }
-//        if (object == null) {
-//          return null;
-//        } else if (object instanceof JSONArray) {
-//            JSONArray xmlJSONArray = (JSONArray) object;
-//            return xmlJSONArray;
-//        } else if (object instanceof JSONObject){
-//            JSONObject xmlJSONObj = (JSONObject) object;
-//            Optional<String> key = xmlJSONObj.keySet()
-//                    .stream()
-//                    .filter(e -> e.endsWith("list") || e.endsWith("container"))
-//                    .findFirst();
-//            if (key.isPresent()) {
-//                return findLowestArray(xmlJSONObj.get(key.get()));
-//            } else {
-//                return null;
-//            }
-//        }
     }
 
     private static void saveToDb(JSONArray array, String collection, String book) {

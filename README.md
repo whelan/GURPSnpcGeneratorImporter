@@ -3,3 +3,4 @@ This is a tool to import data from the http://gurpscharactersheet.com/ files int
 
 # Example
 java -jar gurpsNPCGenerator-all-1.0-SNAPSHOT.jar <location to "Library" folder> <mongo db uri>
+
