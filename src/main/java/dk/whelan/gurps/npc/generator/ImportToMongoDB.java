@@ -65,8 +65,6 @@ public class ImportToMongoDB {
 
     private static void updateSkillTL(String skillAndTL) {
         String[] splitStrings = skillAndTL.split(";");
-//        System.out.println(skillAndTL);
-//        System.out.println(Arrays.asList(splitStrings));
         UpdateResult result = db.getCollection("skill").updateMany(new Document("name", splitStrings[0]).append("specialization", splitStrings[1]),
                 new Document("$set", new Document("tl", Integer.valueOf(splitStrings[2]))));
 
