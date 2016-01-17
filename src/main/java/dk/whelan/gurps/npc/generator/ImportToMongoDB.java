@@ -3,7 +3,10 @@ package dk.whelan.gurps.npc.generator;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.UpdateResult;
+import org.bson.BsonDocument;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,8 +14,11 @@ import org.json.XML;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static java.lang.System.out;
+import static java.lang.System.setOut;
 
 /**
  * Created by lnorregaard on 04/12/15.
@@ -36,13 +42,39 @@ public class ImportToMongoDB {
         mongoClient.dropDatabase("gurps");
         db = mongoClient.getDatabase("gurps");
 
-        System.out.println(FileSystems.getDefault().getRootDirectories().iterator().next());
         Path path = FileSystems.getDefault().getPath(pathString);
 
         try (DirectoryStream<Path> stream =
                      Files.newDirectoryStream(path, "{Advantages,Equipment,Skills,Spells}")) {
             stream.forEach(ImportToMongoDB::insertFiles);
         }
+        resetAllskillsTL();
+        setTLForSpecificSkills(FileSystems.getDefault().getPath("Library/tlSkills.txt"));
+
+
+    }
+
+    private static void setTLForSpecificSkills(Path path) {
+        try (Stream<String> stream = Files.lines(path)) {
+            stream.forEach(ImportToMongoDB::updateSkillTL);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void updateSkillTL(String skillAndTL) {
+        String[] splitStrings = skillAndTL.split(";");
+//        System.out.println(skillAndTL);
+//        System.out.println(Arrays.asList(splitStrings));
+        UpdateResult result = db.getCollection("skill").updateMany(new Document("name", splitStrings[0]).append("specialization", splitStrings[1]),
+                new Document("$set", new Document("tl", Integer.valueOf(splitStrings[2]))));
+
+    }
+
+    private static void resetAllskillsTL() {
+        UpdateResult result = db.getCollection("skill").updateMany(new Document(),
+                new Document("$set", new Document("tl", 10)));
     }
 
     private static void insertFiles(Path path) {
