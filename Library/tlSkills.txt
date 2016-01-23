@@ -1,0 +1,232 @@
+Current Affairs;Supers;10
+Electronics Operation;Matter Transmitters;10
+Electronics Operation;Temporal;10
+Electronics Repair;Matter Transmitters;10
+Electronics Repair;Temporal;10
+Engineer;Nanotechnology;10
+Engineer;Starships;10
+Engineer;Temporal;10
+Geography;Physical, Gas Giants;10
+Geography;Physical, Hostile Terrestrial;10
+Geography;Physical, Ice Dwarfs;10
+Geography;Physical, Ice Worlds;10
+Geography;Physical, Rock Worlds;10
+Geology;@Planet class@;10
+Geology;Gas Giants;10
+Geology;Hostile Terrestrial;10
+Geology;Ice Dwarfs;10
+Geology;Ice Worlds;10
+Geology;Rock Worlds;10
+Hazardous;Materials Nanotech;10
+Hazardous;Materials Nuclear;10
+Mechanic;Antimatter Reactor;10
+Mechanic;Nanomachines;10
+Piloting;Contragravity;10
+Armoury;Force Shields;11
+Electronics Operation;Force Shields;11
+Electronics Repair;Force Shields;11
+Fast-Draw;Force Sword;11
+Force Sword;null;11
+Force Whip;null;11
+Shield;Force Shield;11
+Fast-Draw;Pistol;4
+Gunner;Cannon;4
+Engineer;Artillery;5
+Engineer;Automobiles;5
+Engineer;Civil;5
+Engineer;Clockwork;5
+Engineer;Combat;5
+Engineer;Electrical;5
+Engineer;Electronics;5
+Engineer;Psychotronics;5
+Engineer;Ships;5
+Engineer;Small Arms;5
+Gun Sport;Musket;5
+Gun Sport;Pistol;5
+Gun Sport;Rifle;5
+Gun Sport;Shotgun;5
+Gunner;@Gun class@;5
+Guns;Musket;5
+Guns;Pistol;5
+Guns;Rifle;5
+Guns;Shotgun;5
+Physics;null;5
+Zen Marksmanship;Musket;5
+Zen Marksmanship;Pistol;5
+Zen Marksmanship;Rifle;5
+Zen Marksmanship;Shotgun;5
+Airshipman;null;6
+Artillery;Torpedoes;6
+Boating;Large Powerboat;6
+Boating;Motorboat;6
+Driving;Locomotive;6
+Driving;Mecha;6
+Electric Weapon;@General Weapon Skill@;6
+Electrician;null;6
+Electronics Operation;* Electronic Warfare;6
+Electronics Operation;@* Electronics type@;6
+Electronics Operation;Communications;6
+Gun Sport;Light Anti-Armor Weapon;6
+Guns;Light Anti-Armor Weapon;6
+Liquid Projector;Squirt Gun;6
+Liquid Projector;Water Cannon;6
+Mechanic;Automobile;6
+Mechanic;Diesel Engine;6
+Mechanic;Gas Turbine;6
+Mechanic;Gasoline Engine;6
+Mechanic;Halftrack;6
+Mechanic;Steam Engine;6
+Mechanic;Tracked Drive;6
+Mechanic;Tracked Vehicle;6
+Mechanic;Wheeled Drive;6
+Physics;@TL 6+ Optional Specialty@;6
+Piloting;Float-Bike;6
+Scuba;null;6
+Submarine;Free-Flooding Sub;6
+Zen Marksmanship;Light Anti-Armor Weapon;6
+Artillery;Guided Missile;7
+Driving;@Vehicle class@;7
+Driving;Automobile;7
+Driving;Construction Equipment;7
+Driving;Halftrack;7
+Driving;Heavy Wheeled;7
+Driving;Hovercraft;7
+Driving;Motorcycle;7
+Driving;Tracked;7
+Electronics Operation;Media;7
+Electronics Operation;Medical;7
+Electronics Operation;Parachronic;7
+Electronics Operation;Psychotronics;7
+Electronics Operation;Scientific;7
+Electronics Operation;Security;7
+Electronics Operation;Sensors;7
+Electronics Operation;Sonar;7
+Electronics Operation;Surveillance;7
+Electronics Repair;@Electronics type@;7
+Electronics Repair;Communications;7
+Electronics Repair;Electronic Warfare;7
+Electronics Repair;Media;7
+Electronics Repair;Medical;7
+Electronics Repair;Parachronic;7
+Electronics Repair;Psychotronics;7
+Electronics Repair;Scientific;7
+Electronics Repair;Security;7
+Electronics Repair;Sensors;7
+Electronics Repair;Sonar;7
+Electronics Repair;Surveillance;7
+Explosives;Nuclear Ordnance Disposal;7
+Gun Sport;Grenade Launcher;7
+Gun Sport;Gyroc;7
+Gun Sport;Light Machine Gun;7
+Gun Sport;Submachine Gun;7
+Gunner;Machine Gun;7
+Gunner;Rockets;7
+Guns;Grenade Launcher;7
+Guns;Gyroc;7
+Guns;Light Machine Gun;7
+Guns;Submachine Gun;7
+Liquid Projector;Flamethrower;7
+Liquid Projector;Sprayer;7
+Mechanic;Aerospace;7
+Mechanic;Autogyro;7
+Mechanic;Fission Reactor;7
+Mechanic;Flight Pack;7
+Mechanic;Free-Flooding Sub;7
+Mechanic;Fuel Cell;7
+Mechanic;Heavy Airplane;7
+Mechanic;Heavy Wheeled;7
+Mechanic;Helicopter;7
+Mechanic;High-Performance Airplane;7
+Mechanic;Hovercraft;7
+Mechanic;Large Sub;7
+Mechanic;Light Airplane;7
+Mechanic;Lighter-Than-Air;7
+Mechanic;Mecha;7
+Mechanic;Motorcycle;7
+Mechanic;Rockets;7
+Mechanic;Ultralight;7
+Mechanic;Vertol;7
+Piloting;@Flying vehicle class@;7
+Piloting;Aerospace;7
+Piloting;Autogyro;7
+Piloting;Flight Pack;7
+Piloting;Heavy Airplane;7
+Piloting;Helicopter;7
+Piloting;High-Performance Airplane;7
+Piloting;Light Airplane;7
+Piloting;Lighter-Than-Air;7
+Piloting;Ultralight;7
+Piloting;Vertol;7
+Shiphandling;Submarine;7
+Submarine;Large Sub;7
+Submarine;Min-Sub;7
+Submariner;null;7
+Zen Marksmanship;Grenade Launcher;7
+Zen Marksmanship;Gyroc;7
+Zen Marksmanship;Light Machine Gun;7
+Zen Marksmanship;Submachine Gun;7
+Beam Weapons;@Weapon class@;8
+Beam Weapons;Pistol;8
+Beam Weapons;Projector;8
+Beam Weapons;Rifle;8
+Bioengineering;@Specialty@;8
+Bioengineering;Cloning;8
+Bioengineering;Genetic Engineering;8
+Bioengineering;Tissue Engineering;8
+Computer Hacking;null;8
+Computer Operation;null;8
+Computer Programming;AI;8
+Computer Programming;null;8
+Electronics Repair;Computer;8
+Expert Skill Computer;Security;8
+Gunner;Beams;8
+Hacker!;null;8
+Mathematics;Computer Science;8
+Mechanic;Fusion Reactor;8
+Mechanic;Legged Drive;8
+Mechanic;Mini-Sub;8
+Mechanic;Robotics;8
+Research;null;8
+Shiphandling;Spaceship;8
+Armoury;Battlesuits;9
+Artillery;Beams;9
+Battlesuit;null;9
+Biology;Gas Giants;9
+Biology;Genetics;9
+Biology;Hostile Terrestrial;9
+Biology;Ice Dwarfs;9
+Biology;Ice Worlds;9
+Biology;Marine Biology;9
+Biology;Microbiology;9
+Biology;Rock Worlds;9
+Engineer;Microtechnology;9
+Engineer;Robotics;9
+Mechanic;High-Performance Spacecraft;9
+Mechanic;Lightsail;9
+Mechanic;Low-G Wings;9
+Mechanic;Low-Performance Spacecraft;9
+Mechanic;Micromachines;9
+Mechanic;Reactionless Thrusters;9
+Meteorology;Earthlike;9
+Meteorology;Gas Giants;9
+Meteorology;Hostile Terrestrial;9
+Meteorology;Ice Dwarfs;9
+Meteorology;Ice Worlds;9
+Meteorology;Rock Worlds;9
+Monowire Whip;null;9
+Naturalist;@Planet type@;9
+Naturalist;Earthlike;9
+Naturalist;Gas Giants;9
+Naturalist;Hostile Terrestrial;9
+Naturalist;Ice Dwarfs;9
+Naturalist;Ice Worlds;9
+Naturalist;Rock Worlds;9
+Navigation;Hyperspace;9
+Navigation;Space;9
+Piloting;High-Performance Spaecraft;9
+Piloting;Lightsail;9
+Piloting;Low-G Wings;9
+Piloting;Low-Performance Spacecraft;9
+Piloting;Starship;9
+Shiphandling;Starship;9
+Strategy;Space;9

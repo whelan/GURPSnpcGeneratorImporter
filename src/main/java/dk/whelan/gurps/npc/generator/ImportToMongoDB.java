@@ -72,7 +72,7 @@ public class ImportToMongoDB {
 
     private static void resetAllskillsTL() {
         UpdateResult result = db.getCollection("skill").updateMany(new Document(),
-                new Document("$set", new Document("tl", 10)));
+                new Document("$set", new Document("tl", 0)));
     }
 
     private static void insertFiles(Path path) {
