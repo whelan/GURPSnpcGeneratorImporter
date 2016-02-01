@@ -8,7 +8,6 @@ build
 *.jar
 *.war
 *.ear
-*.gradle
 .gradle
 
 
